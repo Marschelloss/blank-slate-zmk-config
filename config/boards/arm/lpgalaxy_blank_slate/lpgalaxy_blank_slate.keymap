@@ -81,7 +81,7 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
  // &trans     &trans     &trans     &kp ESC         &kp SPACE  &lt NUM_L TAB   &lt NAV_L BKSP   &kp LSHIFT     &kp RET     &trans  &trans      &trans
- &trans     &trans     &trans     &kp ESC         &lt NAV_L SPACE          &mo NUM_L    &kp LSHIFT     &kp RET     &trans  &trans      &trans
+ &trans     &trans     &trans     &kp ESC         &lt NAV_L SPACE          &mo NUM_L    &TD_SHIFTY     &kp RET     &trans  &trans      &trans
             >;
         };
 
