@@ -11,8 +11,8 @@
 
 #define QWERTY_BASE 1
 
-#define TBLE_ORTHO   1
-// #define TBLE_MIT     1
+// #define TBLE_ORTHO   1
+#define TBLE_MIT     1
 // #define TBLE_DUAL_2U 1
 
 #define NAV_L 1
@@ -20,7 +20,7 @@
 #define SYM_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { quick_tap_ms = <200>; flavor = "hold-preferred";};
+&lt { quick_tap_ms = <200>; };
 
 #define BT(n) BT_SEL n
 
@@ -80,27 +80,30 @@
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
- &trans     &trans     &trans     &kp ESC         &kp SPACE  &lt NUM_L TAB   &lt NAV_L BKSP   &kp LSHIFT     &kp RET     &trans  &trans      &trans
+ // &trans     &trans     &trans     &kp ESC         &kp SPACE  &lt NUM_L TAB   &lt NAV_L BKSP   &kp LSHIFT     &kp RET     &trans  &trans      &trans
+ &trans     &trans     &trans     &kp ESC         &lt NAV_L SPACE          &mo NUM_L    &kp LSHIFT     &kp RET     &trans  &trans      &trans
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DEL
-&sk LGUI   &sk LALT   &sk LCTRL  &sk LSHIFT  &trans          &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
-&bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)  &bt BT(4)       &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
-&trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&bt BT_CLR &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&sk LGUI   &sk LALT   &sk LCTRL  &sk LSHIFT  &trans          &trans       &trans     &kp RET        &kp TAB     &trans     &trans     &trans
+&bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)  &bt BT(4)       &trans       &trans     &trans         &trans      &trans     &trans     &trans
+// &trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&trans     &trans     &trans      &trans          &kp SPACE    &trans     &trans         &trans      &trans     &trans     &trans
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &trans         &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &kp MINUS       &trans       &trans     &trans         &sk RSHIFT  &sk RCTRL  &sk RALT   &sk RGUI
-&kp BSLH   &kp GRAVE  &kp N9     &kp N0      &kp SEMI        &trans       &trans     &trans         &trans      &trans     &trans     &trans
-&trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &kp LBKT       &kp RBKT    &kp LBRC   &kp RBRC   &kp DEL
+&kp N1     &kp N2     &kp N3     &kp N4      &kp MINUS       &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp BKSP
+&kp BSLH   &kp GRAVE  &kp N9     &kp N0      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &kp SEMI
+// &trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&trans     &trans     &trans      &trans          &kp SPACE    &trans     &trans         &trans      &trans     &trans     &trans
             >;
         };
 
@@ -110,7 +113,8 @@
 &trans     &kp LBRC   &kp AMPS   &kp STAR    &kp LPAR     &kp RBRC     &trans     &trans    &trans       &trans       &trans     &bootloader
 &trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
 &trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &trans     &trans     &kp RPAR    &trans       &trans       &trans     &trans    &trans       &trans       &trans     &trans
+// &trans     &trans     &trans     &kp RPAR    &trans       &trans       &trans     &trans    &trans       &trans       &trans     &trans
+&trans     &trans     &kp RPAR    &trans       &trans       &trans     &trans    &trans       &trans       &trans     &trans
             >;
         };
 
