@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: marschelloss
-      url-base: https://github.com/Marschellos
+      url-base: https://github.com/Marschelloss
   projects:
     - name: zmk
       remote: marschelloss
