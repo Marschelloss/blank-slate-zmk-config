@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include "mouse.dtsi"
 
 #define QWERTY_BASE 1
 
@@ -95,7 +96,7 @@
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
  // &trans     &trans     &trans     &kp ESC         &kp SPACE  &lt NUM_L TAB   &lt NAV_L BKSP   &kp LSHIFT     &kp RET     &trans  &trans      &trans
- &trans     &trans     &trans     &kp ESC         &lt NAV_L SPACE          &mo NUM_L    &shifty      &kp RET     &trans  &trans      &trans
+ U_BTN1     U_BTN2     U_BTN3     U_WH_D          &lt NAV_L SPACE          &mo NUM_L    &shifty      U_MS_L      U_MS_D  U_MS_U      U_MS_R
             >;
         };
 
