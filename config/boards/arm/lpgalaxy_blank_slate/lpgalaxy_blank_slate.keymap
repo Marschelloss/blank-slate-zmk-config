@@ -11,30 +11,19 @@
 #include "mouse.dtsi"
 
 #define QWERTY_BASE 1
-
-// #define TBLE_ORTHO   1
-#define TBLE_MIT     1
-// #define TBLE_DUAL_2U 1
+#define TBLE_MIT 1
 
 #define NAV_L 1
 #define NUM_L 2
 #define SYM_L 3
 
-// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
 
 #define BT(n) BT_SEL n
 
 / {
     chosen {
-       zmk,matrix_transform =
-#ifdef TBLE_DUAL_2U
-                       &dual_2u_transform;
-#elif defined(TBLE_MIT)
-                       &mit_transform;
-#else
-                       &ortho_transform;
-#endif
+       zmk,matrix_transform = &mit_transform;
     };
 
     macros {
@@ -59,7 +48,7 @@
            };
            combo_tab {
                 timeout-ms = <50>;
-                key-positions = <8 9>;
+                key-positions = <26 27>;
                 bindings = <&kp TAB>;
            };
     };
@@ -71,7 +60,7 @@
 		#binding-cells = <0>;
 		tapping-term-ms = <150>;
 		bindings = <&kp LSHFT>, <&caps_word>;
-	};
+        };
     };
 
     cond_layers {
@@ -97,7 +86,7 @@
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
- U_BTN1     U_BTN2     U_BTN3     U_WH_D          &lt NAV_L SPACE          &lt NUM_L BKSP    &shifty      U_MS_L      U_MS_D  U_MS_U      U_MS_R
+ U_BTN1     U_BTN2     U_BTN3     U_WH_D          &lt NUM_L SPACE          &lt NAV_L BKSP    &shifty      U_MS_L      U_MS_D  U_MS_U      U_MS_R
             >;
         };
 
