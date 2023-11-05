@@ -36,7 +36,7 @@
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LGUI>
             ;
-        }
+        };
     };
 
     combos {
