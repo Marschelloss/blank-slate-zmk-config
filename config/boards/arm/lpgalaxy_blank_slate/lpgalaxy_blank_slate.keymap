@@ -16,6 +16,8 @@
 #define NAV_L 1
 #define NUM_L 2
 #define SYM_L 3
+#define GME_L 4
+#define GNM_L 5
 
 &lt { quick_tap_ms = <200>; };
 
@@ -45,6 +47,7 @@
                 timeout-ms = <50>;
                 key-positions = <14 15>;
                 bindings = <&kp ESC>;
+                layers = <0 1 2 3>;
            };
            combo_ret {
                 timeout-ms = <50>;
@@ -78,7 +81,7 @@
             label = "Base";
             bindings = <
 #ifdef QWERTY_BASE
- &kp Q      &kp W      &kp E       &kp R          &kp T      &trans         &trans      &kp Y            &kp U          &kp I       &kp O      &kp P
+ &kp Q      &kp W      &kp E       &kp R          &kp T      &to 4          &trans      &kp Y            &kp U          &kp I       &kp O      &kp P
  &kp A      &kp S      &kp D       &kp F          &kp G      &trans         &trans      &kp H            &kp J          &kp K       &kp L      &kp QUOT
  &kp Z      &kp X      &kp C       &kp V          &kp B      &trans         &trans      &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
 #else
@@ -120,7 +123,25 @@
             >;
         };
 
+        gme_layer {
+            label = "Gme";
+            bindings = <
+ &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &to 1       &kp Y            &kp U          &kp I       &kp O      &kp P
+ &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &none       &kp H            &kp J          &kp K       &kp L      &kp QUOT
+ &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &none       &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
+ &kp ESC    &kp T      &kp B      &mo GNM_L   &kp SPACE              &kp LSHIFT    &none          &none        &none        &none     &none
+            >;
+        };
 
+        gnm_layer {
+            label = "Gnm";
+            bindings = <
+&kp N5     &kp N6     &kp N7     &kp N8      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&kp N1     &kp N2     &kp N3     &kp N4      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&trans     &trans     &kp N9     &kp N0      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&trans     &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
+            >;
+        };
     };
 };
 
