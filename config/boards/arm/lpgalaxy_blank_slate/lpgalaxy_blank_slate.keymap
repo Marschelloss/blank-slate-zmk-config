@@ -188,7 +188,7 @@
 &kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp SEMI
 &trans     &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
             >;
-        }
+        };
 
         sym_layer {
             label = "Sym";
