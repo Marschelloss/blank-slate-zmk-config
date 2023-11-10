@@ -166,15 +166,15 @@
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
- U_BTN1     U_BTN2     U_BTN3     U_WH_D          &kp SPACE  &mo NUM_L      &lt NAV_L BKSP   &shifty          U_MS_L         U_MS_D      U_MS_U     U_MS_R
+ U_BTN1     U_BTN2     U_BTN3     U_WH_D          &kp SPACE  &mo NUM_L      &mo NAV_L        &shifty          U_MS_L         U_MS_D      U_MS_U     U_MS_R
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-&trans     &trans       &mc_alfred   &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
-&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &kp TAB         &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans
+&trans     &trans       &mc_alfred   &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &kp DELETE
+&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &kp TAB         &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp BKSP
 &trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
 &trans     &trans       &trans       &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
             >;
