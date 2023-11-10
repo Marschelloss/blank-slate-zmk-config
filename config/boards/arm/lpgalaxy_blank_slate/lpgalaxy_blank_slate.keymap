@@ -84,7 +84,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp QUOT>
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp QUOT>
+                , <&macro_release &kp LSHIFT>
                 , <&macro_tap &kp U>
             ;
         };
@@ -93,7 +95,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp QUOT>
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp QUOT>
+                , <&macro_release &kp LSHIFT>
                 , <&macro_tap &kp A>
             ;
         };
@@ -102,7 +106,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp QUOT>
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp QUOT>
+                , <&macro_release &kp LSHIFT>
                 , <&macro_tap &kp O>
             ;
         };
@@ -183,9 +189,9 @@
         num_layer {
             label = "Num";
             bindings = <
-&kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &kp UNDER      &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &kp PLUS        &trans       &trans     &mc_ss         &mc_ae      &mc_oe     &mc_ue     &kp MINUS
-&kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp SEMI
+&kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &caps_word     &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
+&kp N1     &kp N2     &kp N3     &kp N4      &kp SEMI        &trans       &trans     &mc_ss         &mc_ae      &mc_oe     &mc_ue     &kp MINUS
+&kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp PIPE
 &trans     &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
             >;
         };
