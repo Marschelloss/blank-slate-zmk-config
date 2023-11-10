@@ -79,7 +79,7 @@
                 , <&macro_tap &kp SPACE>
             ;
         };
-        mc_ue: mc_grave {
+        mc_ue: mc_ue {
             label = "mc_ue";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -88,7 +88,7 @@
                 , <&macro_tap &kp U>
             ;
         };
-        mc_ae: mc_grave {
+        mc_ae: mc_ae {
             label = "mc_ae";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -97,7 +97,7 @@
                 , <&macro_tap &kp A>
             ;
         };
-        mc_oe: mc_grave {
+        mc_oe: mc_oe {
             label = "mc_oe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -106,7 +106,7 @@
                 , <&macro_tap &kp O>
             ;
         };
-        mc_ss: mc_grave {
+        mc_ss: mc_ss {
             label = "mc_ss";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
