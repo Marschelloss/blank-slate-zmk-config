@@ -61,6 +61,61 @@
                 , <&macro_release &kp LGUI>
             ;
         };
+        mc_quote: mc_quote {
+            label = "mc_quote";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp QUOT>
+                , <&macro_tap &kp SPACE>
+            ;
+        };
+        mc_grave: mc_grave {
+            label = "mc_grave";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp SPACE>
+            ;
+        };
+        mc_ue: mc_grave {
+            label = "mc_ue";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp QUOT>
+                , <&macro_tap &kp U>
+            ;
+        };
+        mc_ae: mc_grave {
+            label = "mc_ae";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp QUOT>
+                , <&macro_tap &kp A>
+            ;
+        };
+        mc_oe: mc_grave {
+            label = "mc_oe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp QUOT>
+                , <&macro_tap &kp O>
+            ;
+        };
+        mc_ss: mc_grave {
+            label = "mc_ss";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp RALT>
+            ;
+        };
     };
 
     combos {
@@ -104,7 +159,7 @@
             bindings = <
 #ifdef QWERTY_BASE
  &kp Q      &kp W      &kp E       &kp R          &kp T      &to 4          &trans      &kp Y            &kp U          &kp I       &kp O      &kp P
- &kp A      &kp S      &kp D       &kp F          &kp G      &trans         &trans      &kp H            &kp J          &kp K       &kp L      &kp QUOT
+ &kp A      &kp S      &kp D       &kp F          &kp G      &trans         &trans      &kp H            &kp J          &kp K       &kp L      &mc_quote
  &kp Z      &kp X      &kp C       &kp V          &kp B      &trans         &trans      &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
 #else
  &kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
@@ -129,11 +184,11 @@
             label = "Num";
             bindings = <
 &kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &kp UNDER      &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &kp PLUS        &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp MINUS
-&kp BSLH   &kp GRAVE  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp SEMI
+&kp N1     &kp N2     &kp N3     &kp N4      &kp PLUS        &trans       &trans     &mc_ss         &mc_ae      &mc_oe     &mc_ue     &kp MINUS
+&kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp SEMI
 &trans     &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
             >;
-        };
+        }
 
         sym_layer {
             label = "Sym";
