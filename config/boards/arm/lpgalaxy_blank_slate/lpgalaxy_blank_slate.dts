@@ -32,7 +32,7 @@
 		};
 	};
 
-	backlight {
+	backlight: gpioleds {
 		compatible = "gpio-leds";
 		label = "Backlight LEDs";
 		blue_led {
