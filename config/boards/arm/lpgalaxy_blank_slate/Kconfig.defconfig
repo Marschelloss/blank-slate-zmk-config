@@ -19,6 +19,10 @@ config USB_DEVICE_STACK
 
 endif # USB
 
+config ZMK_BACKLIGHT
+	select LED
+	select LED_GPIO
+
 config BT_CTLR
 	default BT
 

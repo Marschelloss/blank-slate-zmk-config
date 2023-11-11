@@ -22,10 +22,6 @@
 		zephyr,console = &cdc_acm_uart0;
 	};
 
-	aliases {
-		led0 = &blue_led;
-	};
-
 	behaviors {
 		hw_soft_off: behavior_hw_soft_off {
 			compatible = "zmk,behavior-soft-off";
@@ -35,11 +31,12 @@
 		};
 	};
 
-	leds {
+	backlight {
 		compatible = "gpio-leds";
-		blue_led: led_0 {
+		label = "Backlight LEDs";
+		blue_led {
 			gpios = <&gpio0 16 GPIO_ACTIVE_HIGH>;
-			label = "Blue LED";
+			label = "Backlight LED 0";
 		};
 	};
 
