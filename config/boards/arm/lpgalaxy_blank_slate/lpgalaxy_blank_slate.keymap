@@ -174,7 +174,7 @@
             label = "Nav";
             bindings = <
 &trans     &trans       &mc_alfred   &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans    
-&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &kp TAB         &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp QUOT
+&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &kp TAB         &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp DQT 
 &trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
 &trans     &trans       &trans       &trans      &trans          &trans       &kp DELETE &trans         &trans      &trans     &trans     &trans
             >;
