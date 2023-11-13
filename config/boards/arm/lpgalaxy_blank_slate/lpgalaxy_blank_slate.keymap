@@ -175,7 +175,7 @@
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
  &kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
 #endif
- U_BTN1     U_BTN2     U_BTN3     U_WH_D          &bht NAV_L SPACE  &mo NUM_L      &kp BKSP         &shifty          U_MS_L         U_MS_D      U_MS_U     U_MS_R
+ U_BTN1     U_BTN2     U_BTN3     U_WH_D          &ltp NAV_L SPACE  &mo NUM_L      &kp BKSP         &shifty          U_MS_L         U_MS_D      U_MS_U     U_MS_R
             >;
         };
 
@@ -184,7 +184,7 @@
             bindings = <
 &trans     &trans       &mc_alfred   &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans    
 &sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &kp TAB         &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp DQT 
-&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &trans
+&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &mc_ss
 &trans     &trans       &trans       &trans      &trans          &trans       &kp DELETE &trans         &trans      &trans     &trans     &trans
             >;
         };
@@ -193,7 +193,7 @@
             label = "Num";
             bindings = <
 &kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &caps_word     &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &kp SEMI        &trans       &trans     &mc_ss         &mc_ae      &mc_oe     &mc_ue     &kp MINUS
+&kp N1     &kp N2     &kp N3     &kp N4      &kp SEMI        &trans       &trans     &trans         &trans      &trans     &trans     &kp MINUS
 &kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp PIPE
 &trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
             >;
