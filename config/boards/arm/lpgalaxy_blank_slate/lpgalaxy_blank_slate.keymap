@@ -185,7 +185,7 @@
             bindings = <
 &trans     &trans       &kp TAB      &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans    
 &sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &mc_alfred      &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp BKSP
-&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &kp DELTE
+&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &kp DELETE
 &trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp LSHIFT     &trans      &trans     &trans     &trans
             >;
         };
