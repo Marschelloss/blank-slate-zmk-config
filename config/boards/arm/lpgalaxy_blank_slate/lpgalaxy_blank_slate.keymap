@@ -184,19 +184,19 @@
             label = "Nav";
             bindings = <
 &trans     &trans       &kp TAB      &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans    
-&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &mc_alfred      &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp DQT 
-&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &mc_ss
-&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp BKSP       &trans      &trans     &trans     &trans
+&sk LGUI   &sk LALT     &sk LCTRL    &sk LSHIFT  &mc_alfred      &trans       &trans     &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp BKSP
+&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp HOME       &kp PG_DN   &kp PG_UP  &kp END    &kp DELTE
+&trans     &trans       &trans       &trans      &trans          &trans       &trans     &kp LSHIFT     &trans      &trans     &trans     &trans
             >;
         };
 
         num_layer {
             label = "Num";
             bindings = <
-&kp N5     &kp N6     &kp N7     &kp N8      &kp EQUAL       &trans       &trans     &trans         &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &kp SEMI        &trans       &trans     &trans         &trans      &trans     &trans     &kp MINUS
-&kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp COLON   &kp COMMA  &kp DOT    &kp PIPE
-&trans     &trans     &trans     &trans      &kp DELETE      &trans       &trans     &trans         &trans      &trans     &trans     &trans
+&kp N5     &kp N6     &kp N7     &kp N8      &trans          &trans       &trans     &trans         &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
+&kp N1     &kp N2     &kp N3     &kp N4      &trans          &trans       &trans     &trans         &kp MINUS   &kp EQUAL  &kp SEMI   &kp DQT
+&kp BSLH   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &trans      &kp COMMA  &kp DOT    &mc_ss
+&trans     &trans     &trans     &trans      &kp LSHIFT      &trans       &trans     &trans         &trans      &trans     &trans     &trans
             >;
         };
 
