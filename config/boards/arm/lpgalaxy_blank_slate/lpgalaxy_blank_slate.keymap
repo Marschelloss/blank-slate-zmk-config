@@ -74,6 +74,15 @@
                 , <&macro_tap &kp SPACE>
             ;
         };
+        mc_grave: mc_grave {
+            label = "mc_grave";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp SPACE>
+            ;
+        };
         mc_ss: mc_ss {
             label = "mc_ss";
             compatible = "zmk,behavior-macro";
