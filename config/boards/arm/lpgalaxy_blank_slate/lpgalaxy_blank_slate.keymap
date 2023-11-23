@@ -155,7 +155,7 @@
             label = "Num";
             bindings = <
 &kp N5     &kp N6     &kp N7     &kp N8      &trans          &trans       &trans     &trans         &kp LBKT    &kp RBKT   &kp LBRC   &kp RBRC
-&kp N1     &kp N2     &kp N3     &kp N4      &trans          &trans       &trans     &trans         &kp MINUS   &kp SEMI   &mc_ss     &mc_quote
+&kp N1     &kp N2     &kp N3     &kp N4      &trans          &trans       &trans     &trans         &kp MINUS   &kp SEMI   &mc_ss     &kp QUOT
 &kp PIPE   &mc_grave  &kp N9     &kp N0      &trans          &trans       &trans     &trans         &kp EQUAL   &kp COMMA  &kp DOT    &kp BSLH
 &trans     &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
             >;
