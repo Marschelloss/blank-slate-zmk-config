@@ -180,6 +180,7 @@
                 timeout-ms = <35>;
                 key-positions = <20 21>;
                 bindings = <&kp RET>;
+                layers = <0 1 2 3 4 5>;
            };
            combo_alfred {
                 timeout-ms = <35>;
@@ -204,6 +205,7 @@
                 key-positions = <0 11>;
                 bindings = <&mc_base>;
                 layers = <6>;
+                require-prior-idle-ms = <300>;
            };
     };
     
