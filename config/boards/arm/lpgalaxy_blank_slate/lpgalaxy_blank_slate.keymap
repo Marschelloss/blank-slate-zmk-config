@@ -148,6 +148,24 @@
                 , <&macro_release &kp RALT>
             ;
         };
+        mc_none: mc_none {
+            label = "mc_none";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 6>
+                , <&bl BL_OFF>
+            ;
+        };
+        mc_base: mc_base {
+            label = "mc_base";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 0>
+                , <&bl BL_ON>
+            ;
+        };
     };
 
     combos {
@@ -181,6 +199,12 @@
                 bindings = <&mc_emoji>;
                 layers = <0>;
            };
+           combo_base {
+                timeout-ms = <35>;
+                key-positions = <0 11>;
+                bindings = <&mc_base>;
+                layers = <6>;
+           };
     };
     
     tap_dances {
@@ -208,7 +232,7 @@
             label = "Base";
             bindings = <
  &none      &kp Q      &kp W      &kp E       &kp R          &kp T             &none          &kp Y            &kp U          &kp I       &kp O      &kp P
- &none      &kp A      &kp S      &kp D       &kp F          &kp G             &none          &kp H            &kp J          &kp K       &kp L      &kp BKSP
+ &none      &kp A      &kp S      &kp D       &kp F          &kp G             &mc_none       &kp H            &kp J          &kp K       &kp L      &kp BKSP
  &none      &kp Z      &kp X      &kp C       &kp V          &kp B             &to 4          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
  &none      &none      &none      &none       &mo NAV_L              &kp SPACE                &shifty          &mo NUM_L      &none       &none      &none  
             >;
@@ -261,6 +285,16 @@
 &kp N5     &kp N6     &kp N7     &kp N8      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
 &trans     &trans     &kp N9     &kp N0      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
 &trans     &trans     &trans     &trans      &trans          &trans                  &trans         &trans      &trans     &trans     &trans
+            >;
+        };
+
+        none_layer {
+            label = "None";
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  
+&none  &none  &none  &none  &none      &none     &none  &none  &none  &none  &none  
             >;
         };
     };
