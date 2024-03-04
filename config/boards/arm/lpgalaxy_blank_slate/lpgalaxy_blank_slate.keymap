@@ -151,7 +151,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&to 6>
+                = <&to 5>
                 , <&bl BL_OFF>
             ;
         };
