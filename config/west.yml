@@ -1,11 +1,16 @@
 manifest:
   remotes:
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
     - name: marschelloss
       url-base: https://github.com/Marschelloss
   projects:
     - name: zmk
       remote: marschelloss
-      revision: mouse-softoff
+      revision: zephyr-3.5-pointer
       import: app/west.yml
+    - name: blank-slate-zmk-module
+      remote: petejohanson
+      revision: main
   self:
     path: config
