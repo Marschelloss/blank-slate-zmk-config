@@ -1,13 +1,15 @@
 manifest:
   remotes:
+    - namne: urob
+      url-base: https://github.com/urob
     - name: petejohanson
       url-base: https://github.com/petejohanson
     - name: marschelloss
       url-base: https://github.com/Marschelloss
   projects:
     - name: zmk
-      remote: marschelloss
-      revision: zephyr-3.5-pointer-urob
+      remote: urob
+      revision: main
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
