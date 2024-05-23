@@ -230,8 +230,8 @@
             label = "Numb";
             bindings = <
             &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH    &kp DOT        &kp N1         &kp N2       &kp N3       &kp N4      &none
-            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &kp TILDE   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS   &none
-            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &kp GRAVE   &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8      &none
+            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &mc_tilde   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS   &none
+            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &mc_grave   &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8      &none
             &none   &none            &none        &none        &trans      &kp SPACE   &mt LSHIFT N9  &kp N0         &none        &none        &none       &none
             >;
         };
