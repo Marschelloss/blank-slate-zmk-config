@@ -166,15 +166,21 @@
                 layers = <0 1 2 3 4>;
            };
            combo_pass {
-                timeout-ms = <25>;
+                timeout-ms = <15>;
                 key-positions = <13 16>;
                 bindings = <&mc_pass>;
                 layers = <0>;
            };
            combo_emoji {
-                timeout-ms = <25>;
+                timeout-ms = <15>;
                 key-positions = <13 15>;
                 bindings = <&mc_emoji>;
+                layers = <0>;
+           };
+           combo_quote {
+                timeout-ms = <35>;
+                key-positions = <26 27>;
+                bindings = <&mc_quote>;
                 layers = <0>;
            };
             combo_tab {
@@ -214,8 +220,8 @@
             label = "Base";
             bindings = <
             &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T             &kp Y            &kp U             &kp I       &kp O      &kp P            &to 3
-            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G             &kp H            &kp J             &kp K       &kp L      &kp BKSP         &kp RALT
-            &kp LALT   &kp Z          &kp X      &kp C       &kp V          &kp B             &kp N            &kp M             &kp COMMA   &kp DOT    &kp FSLH         &kp RET
+            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G             &kp H            &kp J             &kp K       &kp L      &kp BKSP         &kp RET
+            &kp LALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B             &kp N            &kp M             &kp COMMA   &kp DOT    &mtp LALT FSLH   &kp RALT
             &kp ESC    &mkp LCLK      &mkp MCLK  &mkp RCLK   &mo NUM_L      &mtp LGUI SPACE   &shifty          &ltp OPT_L LA(U)  U_MS_L      U_MS_D     U_MS_U           U_MS_R
             >;
         };
@@ -223,9 +229,9 @@
         num_layer {
             label = "Numb";
             bindings = <
-            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH    &kp PLUS       &kp N1         &kp N2       &kp N3       &kp N4      &none
+            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH    &kp DOT        &kp N1         &kp N2       &kp N3       &kp N4      &none
             &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &kp TILDE   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS   &none
-            &none   &kp DQT          &kp SQT      &kp LPAR     &kp RPAR    &kp GRAVE   &kp EQUAL      &kp N5         &kp N6       &kp N7       &kp N8      &none
+            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &kp GRAVE   &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8      &none
             &none   &none            &none        &none        &trans      &kp SPACE   &mt LSHIFT N9  &kp N0         &none        &none        &none       &none
             >;
         };
@@ -243,9 +249,9 @@
         gme_layer {
             label = "Gme";
             bindings = <
-            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P          &none
-            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp BKSP       &none
-            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH       &kp RET
+            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P          &kp PG_UP
+            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp BKSP       &kp RET
+            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH       &kp PG_DN
             &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE      &kp LSHIFT       &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4)) &to 0
             >;
         };
@@ -253,9 +259,9 @@
         gnm_layer {
             label = "Gnm";
             bindings = <
-            &kp N5     &kp N1     &kp N2     &kp N3      &kp N4          &trans       &kp PLUS       &kp N1         &kp N2       &kp N3     &kp N4      &trans
+            &kp N5     &kp N1     &kp N2     &kp N3      &kp N4          &trans       &kp DOT        &kp N1         &kp N2       &kp N3     &kp N4      &trans
             &kp N6     &trans     &kp N2     &trans      &kp N7          &trans       &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &kp MINUS   &trans
-            &trans     &kp N8     &kp N9     &kp N0      &trans          &trans       &kp EQUAL      &kp N5         &kp N6       &kp N7     &kp N8      &trans
+            &trans     &kp N8     &kp N9     &kp N0      &trans          &trans       &kp COMMA      &kp N5         &kp N6       &kp N7     &kp N8      &trans
             &trans     &trans     &trans     &trans      &trans          &trans       &mt LSHIFT N9  &kp N0         &trans       &trans     &trans      &trans
             >;
         };
