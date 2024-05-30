@@ -219,50 +219,50 @@
         base_layer {
             label = "Base";
             bindings = <
-            &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T             &kp Y            &kp U             &kp I       &kp O      &kp P            &to 3
-            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G             &kp H            &kp J             &kp K       &kp L      &kp BKSP         &kp RET
-            &kp LALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B             &kp N            &kp M             &kp COMMA   &kp DOT    &mtp LALT FSLH   &kp RALT
-            &kp ESC    &mkp LCLK      &mkp MCLK  &mkp RCLK   &mo NUM_L      &mtp LGUI SPACE   &shifty          &ltp OPT_L LA(U)  U_MS_L      U_MS_D     U_MS_U           U_MS_R
+            &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T               &to 3          &kp Y            &kp U             &kp I       &kp O      &kp P
+            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G               &kp PG_UP      &kp H            &kp J             &kp K       &kp L      &kp BKSP
+            &kp RALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B               &kp PG_DN      &kp N            &kp M             &kp COMMA   &kp DOT    &mtp LALT FSLH
+            &U_MS_L    U_MS_D         &U_MS_U    &U_MS_R     &mo NUM_L      &mtp LGUI SPACE     &none          &shifty          &ltp OPT_L LA(U)  &mkp LCLK   &mkp MCLK  &mkp RCLK
             >;
         };
 
         num_layer {
             label = "Numb";
             bindings = <
-            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH    &kp DOT        &kp N1         &kp N2       &kp N3       &kp N4      &none
-            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &mc_tilde   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS   &none
-            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &mc_grave   &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8      &none
-            &none   &none            &none        &none        &trans      &kp SPACE   &mt LSHIFT N9  &kp N0         &none        &none        &none       &none
+            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH     &none  &kp DOT        &kp N1         &kp N2       &kp N3       &kp N4
+            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &mc_tilde    &none  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS
+            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &mc_grave    &none  &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8
+            &none   &none            &none        &none        &trans      &kp SPACE    &none  &mt LSHIFT N9  &kp N0         &none        &none        &none
             >;
         };
 
         opt_layer {
             label = "Opti";
             bindings = <
-            &none    &kp C_MUTE &kp C_PREV &kp C_PP   &kp C_NEXT  &bt BT_CLR          &kp F11        &kp F1       &kp F2       &kp F3     &kp F4       &none
-            &none    &sk RGUI   &sk RALT   &sk RCTRL  &sk RSHIFT  &out OUT_USB        &kp HOME       &kp PG_DN    &kp PG_UP    &kp END    &kp DELETE   &none
-            &none    &bt BT(0)  &bt BT(1)  &bt BT(2)  &bt BT(3)   &out OUT_BLE        &kp F12        &kp F5       &kp F6       &kp F7     &kp F8       &none
-            &none    &none      &none      &none      &kp LG(SPC) &kp SPACE           &bootloader    &trans       &none        &none      &none        &soft_off
+            &none    &kp C_MUTE &kp C_PREV &kp C_PP   &kp C_NEXT  &bt BT_CLR       &none     &kp F11        &kp F1       &kp F2       &kp F3     &kp F4
+            &none    &sk RGUI   &sk RALT   &sk RCTRL  &sk RSHIFT  &out OUT_USB     &none     &kp HOME       &kp PG_DN    &kp PG_UP    &kp END    &kp DELETE
+            &none    &bt BT(0)  &bt BT(1)  &bt BT(2)  &bt BT(3)   &out OUT_BLE     &none     &kp F12        &kp F5       &kp F6       &kp F7     &kp F8
+            &none    &none      &none      &none      &kp LG(SPC) &kp TAB          &soft_off &bootloader    &trans       &none        &none      &none
             >;
         };
 
         gme_layer {
             label = "Gme";
             bindings = <
-            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P          &kp PG_UP
-            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp BKSP       &kp RET
-            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH       &kp PG_DN
-            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE      &kp LSHIFT       &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4)) &to 0
+            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y        &none     &kp U          &kp I       &kp O      &kp P
+            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H        &kp PG_UP &kp J          &kp K       &kp L      &kp BKSP
+            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N        &kp PG_DN &kp M          &kp COMMA   &kp DOT    &kp FSLH
+            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE      &kp LSHIFT   &to 0     &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4))
             >;
         };
 
         gnm_layer {
             label = "Gnm";
             bindings = <
-            &kp N5     &kp N1     &kp N2     &kp N3      &kp N4          &trans       &kp DOT        &kp N1         &kp N2       &kp N3     &kp N4      &trans
-            &kp N6     &trans     &kp N2     &trans      &kp N7          &trans       &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &kp MINUS   &trans
-            &trans     &kp N8     &kp N9     &kp N0      &trans          &trans       &kp COMMA      &kp N5         &kp N6       &kp N7     &kp N8      &trans
-            &trans     &trans     &trans     &trans      &trans          &trans       &mt LSHIFT N9  &kp N0         &trans       &trans     &trans      &trans
+            &kp N5     &kp N1     &kp N2     &kp N3      &kp N4      &kp F1  &kp F5    &kp DOT        &kp N1         &kp N2       &kp N3     &kp N4
+            &kp N6     &trans     &kp N2     &trans      &kp N7      &kp F2  &kp F6    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &kp MINUS
+            &trans     &kp N8     &kp N9     &kp N0      &trans      &kp F3  &kp F7    &kp COMMA      &kp N5         &kp N6       &kp N7     &kp N8
+            &trans     &trans     &trans     &trans      &trans      &kp F4  &kp F8    &mt LSHIFT N9  &kp N0         &kp F9       &kp F10    &kp F11
             >;
         };
     };
