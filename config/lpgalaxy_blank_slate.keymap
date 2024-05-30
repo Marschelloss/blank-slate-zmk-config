@@ -222,7 +222,7 @@
             &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T               &to 3          &kp Y            &kp U             &kp I       &kp O      &kp P
             &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G               &kp PG_UP      &kp H            &kp J             &kp K       &kp L      &kp BKSP
             &kp RALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B               &kp PG_DN      &kp N            &kp M             &kp COMMA   &kp DOT    &mtp LALT FSLH
-            &U_MS_L    U_MS_D         &U_MS_U    &U_MS_R     &mo NUM_L      &mtp LGUI SPACE     &none          &shifty          &ltp OPT_L LA(U)  &mkp LCLK   &mkp MCLK  &mkp RCLK
+            &U_MS_L    &U_MS_D        &U_MS_U    &U_MS_R     &mo NUM_L      &mtp LGUI SPACE     &none          &shifty          &ltp OPT_L LA(U)  &mkp LCLK   &mkp MCLK  &mkp RCLK
             >;
         };
 
