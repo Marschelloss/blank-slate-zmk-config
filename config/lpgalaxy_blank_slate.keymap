@@ -249,10 +249,10 @@
         gme_layer {
             label = "Gme";
             bindings = <
-            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y        &none     &kp U          &kp I       &kp O      &kp P
-            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G          &kp H        &kp PG_UP &kp J          &kp K       &kp L      &kp BKSP
-            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N        &kp PG_DN &kp M          &kp COMMA   &kp DOT    &kp FSLH
-            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE      &kp LSHIFT   &to 0     &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4))
+            &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T       &none        &kp Y        &kp U          &kp I       &kp O      &kp P
+            &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G       &kp PG_UP    &kp H        &kp J          &kp K       &kp L      &kp BKSP
+            &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B       &kp PG_DN    &kp N        &kp M          &kp COMMA   &kp DOT    &kp FSLH
+            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE   &to 0        &kp LSHIFT   &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4))
             >;
         };
 
