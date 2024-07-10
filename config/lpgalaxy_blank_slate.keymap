@@ -9,27 +9,28 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/outputs.h>
-#include "mouse.dtsi"
 
-#define QWERTY_BASE 1
-#define TBLE_ORTHO 1
-
+// Shortcuts
 #define XXX &none
 #define ___ &trans
+#define BT(n) BT_SEL n
+#define boot &bootloader
 
+// Layers
+#define BSE_L 0
 #define NUM_L 1
-#define OPT_L 2
+#define SYM_L 2
 #define GME_L 3
 #define GNM_L 4
 
+// Config
 &lt { quick_tap_ms = <100>; tapping-term-ms = <150>; };
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS SPACE>;
 };
 
-#define BT(n) BT_SEL n
-
+// Keymap
 / {
     chosen {
         zmk,matrix_transform = &ortho_transform;
@@ -65,42 +66,18 @@
     };
 
     macros {
-        mc_alfred: mc_alfred {
-            label = "mc_alfred";
+        mc_dead: mc_dead {
+            label = "mc_dead";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LGUI>
-            ;
-        };
-        mc_pass: mc_pass {
-            label = "mc_pass";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LGUI>
+                = <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp QUOT>
                 , <&macro_release &kp LSHIFT>
             ;
         };
-        mc_emoji: mc_emoji {
-            label = "mc_emoji";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LCTRL>
-            ;
-        };
-        mc_quote: mc_quote {
-            label = "mc_quote";
+        mc_quot: mc_quote {
+            label = "mc_quot";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -119,8 +96,8 @@
                 , <&macro_tap &kp SPACE>
             ;
         };
-        mc_grave: mc_grave {
-            label = "mc_grave";
+        mc_grv: mc_grave {
+            label = "mc_grv";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -128,8 +105,8 @@
                 , <&macro_tap &kp SPACE>
             ;
         };
-        mc_tilde: mc_tilde {
-            label = "mc_tilde";
+        mc_tild: mc_tilde {
+            label = "mc_tild";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -137,16 +114,6 @@
                 , <&macro_tap &kp GRAVE>
                 , <&macro_release &kp LSHIFT>
                 , <&macro_tap &kp SPACE>
-            ;
-        };
-        mc_ss: mc_ss {
-            label = "mc_ss";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp RALT>
             ;
         };
     };
@@ -165,30 +132,18 @@
                 bindings = <&kp RET>;
                 layers = <0 1 2 3 4>;
            };
-           combo_pass {
-                timeout-ms = <15>;
-                key-positions = <13 16>;
-                bindings = <&mc_pass>;
-                layers = <0>;
-           };
-           combo_emoji {
-                timeout-ms = <15>;
-                key-positions = <13 15>;
-                bindings = <&mc_emoji>;
-                layers = <0>;
-           };
            combo_quote {
                 timeout-ms = <35>;
                 key-positions = <26 27>;
-                bindings = <&mc_quote>;
+                bindings = <&mc_quot>;
                 layers = <0>;
            };
-            combo_tab {
-                timeout-ms = <35>;
-                key-positions = <27 28>;
-                bindings = <&kp TAB>;
-                layers = <0>;
-            };
+           combo_dqt {
+             timeout-ms = <35>;
+             key-positions = <27 28>;
+             bindings = <&mc_dqt>;
+             layers = <0>;
+           };
             combo_colon {
                 timeout-ms = <35>;
                 key-positions = <32 33>;
@@ -216,48 +171,48 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            label = "Base";
+        bse_layer {
+            label = "Based";
             bindings = <
-            &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T               &to 3          &kp Y            &kp U             &kp I       &kp O      &kp P
-            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G               &kp PG_UP      &kp H            &kp J             &kp K       &kp L      &kp BKSP
-            &kp RALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B               &kp PG_DN      &kp N            &kp M             &kp COMMA   &kp DOT    &mtp LALT FSLH
-            U_MS_L     U_MS_D         U_MS_U     U_MS_R      &mo NUM_L      &mtp LGUI SPACE     &none          &shifty          &ltp OPT_L LA(U)  &mkp LCLK   &mkp MCLK  &mkp RCLK
+            &kp TAB    &kp Q          &kp W      &kp E       &kp R          &kp T               &to GME_L      &kp Y       &kp U              &kp I       &kp O      &kp P
+            &kp LCTRL  &kp A          &kp S      &kp D       &kp F          &kp G               &none          &kp H       &kp J              &kp K       &kp L      &kp BKSP
+            &kp LALT   &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B               &none          &kp N       &kp M              &kp COMMA   &kp DOT    &mtp LALT FSLH
+            &kp ESC    &none          &none      &none       &mo NUM_L      &mtp LGUI SPACE     &none          &shifty     &ltp SYM_L mc_dead &none       &none      &kp RET   
             >;
         };
 
         num_layer {
-            label = "Numb";
+            label = "Number";
             bindings = <
-            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH     &none  &kp DOT        &kp N1         &kp N2       &kp N3       &kp N4
-            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &mc_tilde    &none  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS
-            &none   &kp PLUS         &kp EQUAL    &kp LPAR     &kp RPAR    &mc_grave    &none  &kp COMMA      &kp N5         &kp N6       &kp N7       &kp N8
-            &none   &none            &none        &none        &trans      &kp SPACE    &none  &mt LSHIFT N9  &kp N0         &none        &none        &none
+            &none   &kp LBKT         &kp RBKT     &kp LBRC     &kp RBRC    &kp BSLH     &none  &none          &kp N1         &kp N2       &kp N3       &kp N4
+            &none   &kp LGUI         &kp LALT     &kp LCTRL    &kp LSHIFT  &mc_tild     &none  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT    &kp MINUS
+            &none   &kp PLUS         &kp EQUAL    &kp COMMA    &kp DOT     &mc_grv      &none  &none          &kp N5         &kp N6       &kp N7       &kp N8
+            &none   &none            &none        &none        &trans      &none        &none  &mt LSHIFT N9  &kp N0         &none        &none        &none
             >;
         };
 
-        opt_layer {
-            label = "Opti";
+        sym_layer {
+            label = "Symbol";
             bindings = <
-            &none    &kp C_MUTE &kp C_PREV &kp C_PP   &kp C_NEXT  &bt BT_CLR       &none     &kp F11        &kp F1       &kp F2       &kp F3     &kp F4
-            &none    &sk RGUI   &sk RALT   &sk RCTRL  &sk RSHIFT  &out OUT_USB     &none     &kp HOME       &kp PG_DN    &kp PG_UP    &kp END    &kp DELETE
-            &none    &bt BT(0)  &bt BT(1)  &bt BT(2)  &bt BT(3)   &out OUT_BLE     &none     &kp F12        &kp F5       &kp F6       &kp F7     &kp F8
-            &none    &none      &none      &none      &kp LG(SPC) &kp TAB          &soft_off &bootloader    &trans       &none        &none      &none
+            &none    &kp LBKT   &kp RBKT   &kp LBRC   &kp RBRC    &none            &BT_CLR   &kp F11        &kp F1       &kp F2       &kp F3     &kp F4
+            &none    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHIFT  &mc_tild         &none     &kp HOME       &kp PG_DN    &kp PG_UP    &kp END    &kp DELETE
+            &none    &kp BSLS   &kp PIPE   &kp LPRN   &kp RPRN    &mc_grv          &none     &kp F12        &kp F5       &kp F6       &kp F7     &kp F8
+            &boot    &bt BT(0)  &bt BT(1)  &bt BT(2)  &kp TAB     &kp SPACE        &none     &none          &trans       &OUT_USB     &OUT_BLE   &soft_off
             >;
         };
 
         gme_layer {
-            label = "Gme";
+            label = "Game";
             bindings = <
             &kp TAB    &kp Q      &kp W      &kp E       &kp R          &kp T       &none        &kp Y        &kp U          &kp I       &kp O      &kp P
             &kp LCTRL  &kp A      &kp S      &kp D       &kp F          &kp G       &kp PG_UP    &kp H        &kp J          &kp K       &kp L      &kp BKSP
             &kp LALT   &kp Z      &kp X      &kp C       &kp V          &kp B       &kp PG_DN    &kp N        &kp M          &kp COMMA   &kp DOT    &kp FSLH
-            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE   &to 0        &kp LSHIFT   &mo OPT_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4))
+            &kp ESC    &kp T      &kp B      &kp LSHIFT  &mo GNM_L      &kp SPACE   &to BSE_L    &kp LSHIFT   &mo SYM_L      &kp C_PP    &kp C_NEXT &kp LC(RA(F4))
             >;
         };
 
         gnm_layer {
-            label = "Gnm";
+            label = "GameNumber";
             bindings = <
             &kp N5     &kp N1     &kp N2     &kp N3      &kp N4      &kp F1  &kp F5    &kp DOT        &kp N1         &kp N2       &kp N3     &kp N4
             &kp N6     &trans     &kp N2     &trans      &kp N7      &kp F2  &kp F6    &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &kp MINUS
