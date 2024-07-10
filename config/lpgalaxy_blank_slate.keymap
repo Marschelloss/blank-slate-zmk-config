@@ -44,7 +44,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&>;
         };
         mtp: mod_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
