@@ -7,9 +7,13 @@ manifest:
     - name: marschelloss
       url-base: https://github.com/Marschelloss
   projects:
+    # - name: zmk
+    #   remote: urob
+    #   revision: main
+    #   import: app/west.yml
     - name: zmk
-      remote: urob
-      revision: main
+      remote: petejohanson
+      revision: pointers-move-scroll
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
