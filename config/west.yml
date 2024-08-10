@@ -6,14 +6,16 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: marschelloss
       url-base: https://github.com/Marschelloss
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     # - name: zmk
     #   remote: urob
     #   revision: main
     #   import: app/west.yml
     - name: zmk
-      remote: petejohanson
-      revision: feat/pointers-move-scroll
+      remote: caksoylar
+      revision: caksoylar/experimental
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
