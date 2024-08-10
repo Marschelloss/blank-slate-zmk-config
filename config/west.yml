@@ -12,8 +12,8 @@ manifest:
     #   revision: main
     #   import: app/west.yml
     - name: zmk
-      remote: petejohanson
-      revision: feat/pointers-move-scroll
+      remote: marschelloss
+      revision: pr2027
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
