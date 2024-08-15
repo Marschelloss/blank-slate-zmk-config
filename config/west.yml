@@ -9,13 +9,9 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
   projects:
-    # - name: zmk
-    #   remote: urob
-    #   revision: main
-    #   import: app/west.yml
     - name: zmk
-      remote: caksoylar
-      revision: caksoylar/experimental
+      remote: marschelloss
+      revision: pr2027-updated
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
