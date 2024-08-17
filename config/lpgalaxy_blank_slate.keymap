@@ -70,6 +70,8 @@
             label = "mc_dead";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
             bindings
                 = <&macro_press &kp LSHIFT>
                 , <&macro_tap &kp QUOT>
