@@ -63,7 +63,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&to MSE_L>;
+            bindings = <&kp>, <&mc_mouse>;
         };
         bht: balanced_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -76,6 +76,16 @@
     };
 
     macros {
+        mc_mouse: mc_mouse {
+            label = "mc_mouse";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings
+                = <&macro_tap &to MSE_L>
+            ;
+        };
         mc_dead: mc_dead {
             label = "mc_dead";
             compatible = "zmk,behavior-macro";
