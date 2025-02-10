@@ -1,5 +1,7 @@
 manifest:
   remotes:
+    - name: zmkfirmware
+      url: https://github.com/zmkfirmware/zmk
     - name: urob
       url-base: https://github.com/urob
     - name: petejohanson
@@ -10,8 +12,8 @@ manifest:
       url-base: https://github.com/caksoylar
   projects:
     - name: zmk
-      remote: marschelloss
-      revision: pr2027-updated
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
