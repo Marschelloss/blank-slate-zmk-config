@@ -188,7 +188,7 @@
             &kp TAB          &kp Q          &kp W      &kp E       &kp R          &kp T               &to GME_L      &kp Y       &kp U       &kp I       &kp O      &kp P
             &mtm LCTRL MSE_L &kp A          &kp S      &kp D       &kp F          &kp G               &none          &kp H       &kp J       &kp K       &kp L      &kp BKSP
             &kp LALT         &mtp LCTRL Z   &kp X      &kp C       &kp V          &kp B               &none          &kp N       &kp M       &kp COMMA   &kp DOT    &mtp LALT FSLH
-            &kp ESC          &bt BT(0)      &bt BT(1)  &bt BT(2)   &mo NUM_L      &mtp LGUI SPACE     &out OUT_BLE   &shifty     &ltp SYM_L  &bt BT(3)   &bt BT(4)  &none  &kp RET   
+            &kp ESC          &BT(0)         &BT(1)     &BT(2)      &mo NUM_L      &mtp LGUI SPACE     &out OUT_BLE   &shifty     &ltp SYM_L  &BT(3)      &BT(4)     &kp RET   
             >;
         };
 
